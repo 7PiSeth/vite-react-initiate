@@ -3,7 +3,7 @@ import ToggleTheme from "../common/ToggleTheme";
 
 const Header = () => {
   return (
-    <div className="h-[5vh] flex items-center justify-center">
+    <div className="h-[50px] flex items-center justify-center">
       <ToggleTheme />
     </div>
   )
