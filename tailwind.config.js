@@ -54,15 +54,6 @@ module.exports = {
         workSans: ['Work Sans', 'sans-serif'],
         zillaSlab: ['Zilla Slab', 'serif'],
       },
-      keyframes: {
-        widthChange: {
-          '0%': { width: '0px' },
-          '100%': { width: '100%' },
-        },
-      },
-      animation: {
-        widthChange: 'widthChange 1s ease-in-out',
-      },
     },
   },
   darkMode: 'class', // Enable dark mode

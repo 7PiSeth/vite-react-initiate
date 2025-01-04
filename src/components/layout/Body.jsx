@@ -1,18 +1,25 @@
-// import React, { useEffect, useState } from "react";
-// import SideBar from "../layout/SideBar";
-// import Button from "../common/Button";
-// import Hamburger from "../common/Hamburger";
+import { useState } from "react";
+import SearchBox from "../common/SearchBox";
 import SideBar from "../common/SideBar";
-// import Carousel from "../common/Carousel";
+import { FaRegArrowAltCircleUp } from "react-icons/fa";
 
 const Body = () => {
-  // const [nav, setNav] = useState(false);
+  const [isMessageSent, setIsMessageSent] = useState(false);
   return (
-    <div className="h-[90vh] flex items-center justify-center">
-      {/* <Carousel />
-      <Button title='Click here' />
-      <Hamburger /> */}
+    <div
+      className={`h-[95vh] flex justify-center transition-all duration-500 ease-out ${
+        isMessageSent ? "items-end pb-7" : " items-center"
+      }`}
+    >
       <SideBar />
+      <div className="relative">
+        <SearchBox />
+        <FaRegArrowAltCircleUp
+          onClick={() => setIsMessageSent(true)}
+          className="absolute right-4 top-12 cursor-pointer hover:scale-110 active:scale-150 transition-all ease-out duration-300"
+          size={27}
+        />
+      </div>
     </div>
   );
 };

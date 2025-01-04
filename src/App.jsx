@@ -4,6 +4,8 @@ import AOS from "aos";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import Body from "./components/layout/Body";
+import topright from "./assets/kback-khmer/position/top-right.png";
+import bottomright from "./assets/kback-khmer/position/bottom-right.png";
 
 const App = () => {
   useEffect(() => {

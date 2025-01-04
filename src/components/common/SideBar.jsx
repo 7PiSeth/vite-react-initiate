@@ -8,7 +8,7 @@ import Hamburger from "./Hamburger";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false); // Toggle collapse
-  const [isOpenSideBar, setIsOpenSideBar] = useState(true); // Toggle sidebar
+  const [isOpenSideBar, setIsOpenSideBar] = useState(false); // Toggle sidebar
 
   return (
     <div>
@@ -65,26 +65,24 @@ const Sidebar = () => {
               {!isCollapsed && <span>Logout</span>}
             </a>
           </li>
-        </ul>
+        </ul>        
       </div>
       {/* Sidebar mobile */}
+      {/* hamburger menu */}
       <div
-        className={`fixed top-0 left-0 h-full hidden max-md:block transition-all duration-500 ease-out
-         ${
-           isOpenSideBar
-             ? " bg-transparent"
-             : " bg-slate-200 dark:bg-[rgb(22,27,34)] dark:text-[#A3B3BC]"
-         } `}
+        className="cursor-pointer hidden max-md:block hover:text-gray-500 absolute top-4 left-4"
+        onClick={() => setIsOpenSideBar(!isOpenSideBar)}
       >
-        {/* Header */}
-        <div
-          className="cursor-pointer hover:text-gray-500 p-4"
-          onClick={() => setIsOpenSideBar(!isOpenSideBar)}
-        >
-          <Hamburger size={27}/>
-        </div>
+        <Hamburger size={27} />
+      </div>
+      <div
+        className={`fixed top-0 left-0 h-full hidden max-md:block transition-all pr-32 dark:bg-[rgb(22,27,34)] dark:text-[#A3B3BC]
+          transform ease-in-out duration-500 z-20 ${
+            isOpenSideBar ? "translate-x-[0vw]" : "-translate-x-[100vw]"
+          }`}
+      >
         {/* Navigation Items */}
-        <ul className={`p-4 space-y-6 ${isOpenSideBar ? "hidden" : "block"}`}>
+        <ul className={`p-4 mt-14 space-y-6 `}>
           <li>
             <a
               href="#"
