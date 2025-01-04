@@ -37,10 +37,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen">
-      <img
+      {/* <img
         src={currentImg}
         className="h-full w-full object-cover absolute -z-10"
-      />
+      /> */}
       <Header />
       <Body />
       <Footer />

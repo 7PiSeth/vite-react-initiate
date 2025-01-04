@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSun } from "react-icons/fa";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
@@ -17,7 +17,8 @@ const Header = () => {
       <div
         className="w-1/2 h-full p-2 z-10"
         onClick={() => {
-          document.querySelector("meta[name='theme-color']").content = "#E3E8EF";
+          document.querySelector("meta[name='theme-color']").content =
+            "#E3E8EF";
           setDarkMode(false);
         }}
       >
@@ -27,7 +28,8 @@ const Header = () => {
       <div
         className="w-1/2 h-full p-2 z-10"
         onClick={() => {
-          document.querySelector("meta[name='theme-color']").content = "#0D1117";
+          document.querySelector("meta[name='theme-color']").content =
+            "#0D1117";
           setDarkMode(true);
         }}
       >
