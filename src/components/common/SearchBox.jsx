@@ -21,8 +21,9 @@ const SearchBox = () => {
         value={content}
         onChange={handleInputChange}
         placeholder="Message ChatPD ..."
-        className="overflow-hidden w-[40vw] min-w-[300px]  p-7 rounded-3xl resize-none 
-         dark:bg-[rgb(22,27,34)] dark:text-[#A3B3BC]"
+        className="overflow-hidden w-[40vw] max-md:w-[90vw]  
+        p-7 rounded-3xl resize-none font-raleway text-lg
+        dark:bg-[rgb(22,27,34)] dark:text-[#A3B3BC]"
         rows={1} // Start with one row
       />
     </div>
