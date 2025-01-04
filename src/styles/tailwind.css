@@ -44,3 +44,11 @@
       dark:bg-[#1E2329] bg-[#F4F6F8];
     }
   }
+
+  /* In your global CSS file (e.g., App.css) */
+
+@supports (-webkit-touch-callout: none) {
+  .custom-height {
+    height: -webkit-fill-available; /* Safari-specific fill available height */
+  }
+}
