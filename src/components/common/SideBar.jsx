@@ -70,7 +70,7 @@ const Sidebar = () => {
       {/* Sidebar mobile */}
       {/* hamburger menu */}
       <div
-        className="cursor-pointer hidden max-md:block hover:text-gray-500 absolute top-4 left-4"
+        className="cursor-pointer hidden max-md:block hover:text-gray-500 z-50 top-4 left-4 fixed"
         onClick={() => setIsOpenSideBar(!isOpenSideBar)}
       >
         <Hamburger size={27} />

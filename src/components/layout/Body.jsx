@@ -7,7 +7,7 @@ const Body = () => {
   const [isMessageSent, setIsMessageSent] = useState(false);
   return (
     <div
-      className={`h-[95vh] flex justify-center transition-all duration-500 ease-out ${
+      className={`min-h-[95vh] flex justify-center transition-all duration-500 ease-out ${
         isMessageSent ? "items-end pb-7" : " items-center"
       }`}
     >
