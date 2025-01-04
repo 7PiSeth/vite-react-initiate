@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SearchBox from "../common/SearchBox";
 import SideBar from "../common/SideBar";
-import { FaRegArrowAltCircleUp } from "react-icons/fa";
+import { BsArrowUpCircle } from "react-icons/bs";
 
 const Body = () => {
   const [isMessageSent, setIsMessageSent] = useState(false);
@@ -14,7 +14,7 @@ const Body = () => {
       <SideBar />
       <div className="relative">
         <SearchBox />
-        <FaRegArrowAltCircleUp
+        <BsArrowUpCircle
           onClick={() => setIsMessageSent(true)}
           className="absolute right-4 top-12 cursor-pointer hover:scale-110 active:scale-150 transition-all ease-out duration-300"
           size={27}
